@@ -17,6 +17,18 @@
     #horoscope-wrapper .horoscope-module#primary .horoscope .entry-content {
     height: 350px !important;
     }
+    #horoscope-wrapper .horoscope-social .horoscope-vk a {
+        display: inline-block;
+        vertical-align: middle;
+        height: 16px;
+        width: 28px;
+        background-image: url(vk_icon.png);
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+    }
+    #horoscope-wrapper .horoscope-social {
+        width: 90px !important;
+    }
     </style>
     <link href="fonts.css" rel="stylesheet" type="text/css">
     <meta content="Copyright 2014 NYP Holdings. All rights reserved." name=
@@ -340,17 +352,7 @@ data-twttr-rendered="true">
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2F1Bn0Maj&amp;text=Aquarius+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2F1Bn0Maj&amp;p[title]=Aquarius+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article><!-- #post -->
 
@@ -370,17 +372,7 @@ data-twttr-rendered="true">
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2F1u4gQ0l&amp;text=Pisces+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2F1u4gQ0l&amp;p[title]=Pisces+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article><!-- #post -->
 
@@ -400,17 +392,7 @@ data-twttr-rendered="true">
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2FYrHtQg&amp;text=Aries+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2FYrHtQg&amp;p[title]=Aries+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article>
                                 </div>
@@ -432,17 +414,7 @@ data-twttr-rendered="true">
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2F1t5DAsH&amp;text=Taurus+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2F1t5DAsH&amp;p[title]=Taurus+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article>
 
@@ -460,19 +432,8 @@ data-twttr-rendered="true">
                                         <div class="entry-content">
                                             <p><%= @prognozes["blizneci"] %></p>
                                         </div><!-- .entry-content -->
-
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2F1xqFScy&amp;text=Gemini+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2F1xqFScy&amp;p[title]=Gemini+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article><!-- #post -->
 
@@ -490,19 +451,8 @@ data-twttr-rendered="true">
                                         <div class="entry-content">
                                             <p><%= @prognozes["rak"] %></p>
                                         </div><!-- .entry-content -->
-
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2FYt84MC&amp;text=Cancer+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2FYt84MC&amp;p[title]=Cancer+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article><!-- #post -->
                                 </div>
@@ -524,17 +474,7 @@ data-twttr-rendered="true">
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2F1yvahrQ&amp;text=Leo+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2F1yvahrQ&amp;p[title]=Leo+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article><!-- #post -->
 
@@ -554,17 +494,7 @@ data-twttr-rendered="true">
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2F1sDxrJU&amp;text=Virgo+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2F1sDxrJU&amp;p[title]=Virgo+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article><!-- #post -->
 
@@ -584,17 +514,7 @@ data-twttr-rendered="true">
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2F1Cw2MPZ&amp;text=Libra+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2F1Cw2MPZ&amp;p[title]=Libra+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article>
                                 </div>
@@ -616,17 +536,7 @@ data-twttr-rendered="true">
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2F1mBPahY&amp;text=Scorpio+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2F1mBPahY&amp;p[title]=Scorpio+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article>
 
@@ -647,17 +557,7 @@ data-twttr-rendered="true">
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2F1uRhQCP&amp;text=Sagittarius+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2F1uRhQCP&amp;p[title]=Sagittarius+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article><!-- #post -->
 
@@ -677,17 +577,7 @@ data-twttr-rendered="true">
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
-                                            <li class="horoscope-twitter">
-                                                <a href=
-                                                "https://twitter.com/share?url=http%3A%2F%2Fnyp.st%2F1xqFJpt&amp;text=Capricorn+Horoscope+for+9/28/2014&amp;related=nypost"
-                                                target="_blank">Twitter</a>
-                                            </li>
-
-                                            <li class="horoscope-facebook">
-                                                <a href=
-                                                "http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fnyp.st%2F1xqFJpt&amp;p[title]=Capricorn+Horoscope+for+9/28/2014"
-                                                target="_blank">Facebook</a>
-                                            </li>
+                                            <%= erb :social %>
                                         </ul>
                                     </article><!-- #post -->
                                 </div><!-- .row -->
