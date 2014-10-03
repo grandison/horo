@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'typhoeus'
 require 'nokogiri'
+require 'russian'
 
 set :protection, :except => :frame_options
 
@@ -32,6 +33,7 @@ def get_prognoz
 end
 
 get '/' do
+	@date = Russian::strftime(Time.now, "%d %B")
 	@prognozes = get_prognoz
 	erb :index
 end

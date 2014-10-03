@@ -50,7 +50,7 @@
     "http://s0.wp.com/wp-content/themes/vip/nypost/static/images/favicon-nypost/favicon.ico?m=1405452510g"
     rel="shortcut icon" type="image/x-icon">
 
-    <title>Daily Horoscope | New York Post</title>
+    <title>Гороскоп на <%= @date %></title>
     <link href="http://gmpg.org/xfn/11" rel="profile">
     <link href=
     "http://s0.wp.com/wp-content/themes/vip/nypost/static/images/favicon.png?m=1391172942g"
@@ -294,8 +294,7 @@ data-twttr-rendered="true">
                 <div class="container">
                     <nav id="page-nav">
                         <div class="nav-links">
-                            <a class="nav-item"><span style=
-                            " font-size: 30px;">Гороскоп на сегодня</span></a>
+                            <a class="nav-item"><span style=" font-size: 30px; font-style: italic; text-shadow: -2px 2px 6px black;">Гороскоп на сегодня(<%= @date %>)</span></a>
                         </div>
                     </nav>
                 </div>
