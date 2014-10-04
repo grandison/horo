@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 gem 'sinatra'
+gem 'sinatra-partial'
 gem 'typhoeus'
 gem 'nokogiri'
 gem 'russian'

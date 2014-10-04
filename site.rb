@@ -1,9 +1,11 @@
 require 'sinatra'
+require 'sinatra/partial'
 require 'typhoeus'
 require 'nokogiri'
 require 'russian'
 
 set :protection, :except => :frame_options
+set :partial_template_engine, :erb
 
 class Cache
 	def self.get(key)
@@ -36,4 +38,15 @@ get '/' do
 	@date = Russian::strftime(Time.now, "%d %B")
 	@prognozes = get_prognoz
 	erb :index
+end
+
+get '/:znak/full' do
+	@date = Russian::strftime(Time.now, "%d %B")
+	@prognozes = get_prognoz
+	partial( :znak_full, :locals => { znak: params[:znak]} )
+end
+
+get '/:znak' do
+	@prognozes = get_prognoz
+	partial( :znak, :locals => { znak: params[:znak]} )
 end

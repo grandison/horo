@@ -335,7 +335,7 @@ data-twttr-rendered="true">
                         id="primary" style=" width: 100%;">
                             <div class="site-content">
                                 <div class="row">
-                                    <article class="box horoscope">
+                                    <article class="box horoscope" style="width:100%;">
                                         <header class="entry-header">
                                             <div class="sign aquarius"></div>
 
@@ -347,7 +347,7 @@ data-twttr-rendered="true">
                                         </header><!-- .entry-header -->
 
                                         <div class="entry-content">
-                                            <%= partial( :prognoz, :locals => { znak: "vodoley"} ) %>
+                                            <%= partial( :prognoz_full, :locals => { znak: "vodoley"} ) %>
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
@@ -355,231 +355,8 @@ data-twttr-rendered="true">
                                         </ul>
                                     </article><!-- #post -->
 
-                                    <article class="box horoscope">
-                                        <header class="entry-header">
-                                            <div class="sign pisces"></div>
-
-                                            <h3><a href="#">Рыбы</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>19 февраля - 20 марта</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <%= partial( :prognoz, :locals => { znak: "ribi"} ) %>
-                                        </div><!-- .entry-content -->
-
-                                        <ul class="horoscope-social">
-                                            <%= erb :social %>
-                                        </ul>
-                                    </article><!-- #post -->
-
-                                    <article class="box horoscope">
-                                        <header class="entry-header">
-                                            <div class="sign aries"></div>
-
-                                            <h3><a href="#">Овен</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>21 марта - 19 апреля</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <%= partial( :prognoz, :locals => { znak: "oven"} ) %>
-                                        </div><!-- .entry-content -->
-
-                                        <ul class="horoscope-social">
-                                            <%= erb :social %>
-                                        </ul>
-                                    </article>
                                 </div>
 
-                                <div class="row">
-                                    <article class="box horoscope">
-                                        <header class="entry-header">
-                                            <div class="sign taurus"></div>
-
-                                            <h3><a href="#">Телец</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>20 апреля - 20 мая</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <%= partial( :prognoz, :locals => { znak: "telec"} ) %>
-                                        </div><!-- .entry-content -->
-
-                                        <ul class="horoscope-social">
-                                            <%= erb :social %>
-                                        </ul>
-                                    </article>
-
-                                    <article class="box horoscope">
-                                        <header class="entry-header">
-                                            <div class="sign gemini"></div>
-
-                                            <h3><a href="#">Близнецы</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>21 мая - 20 июня</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <%= partial( :prognoz, :locals => { znak: "blizneci"} ) %>
-                                        </div><!-- .entry-content -->
-                                        <ul class="horoscope-social">
-                                            <%= erb :social %>
-                                        </ul>
-                                    </article><!-- #post -->
-
-                                    <article class="box horoscope">
-                                        <header class="entry-header">
-                                            <div class="sign cancer"></div>
-
-                                            <h3><a href="#">Рак</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>21 июня - 22 июля</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <%= partial( :prognoz, :locals => { znak: "rak"} ) %>
-                                        </div><!-- .entry-content -->
-                                        <ul class="horoscope-social">
-                                            <%= erb :social %>
-                                        </ul>
-                                    </article><!-- #post -->
-                                </div>
-
-                                <div class="row">
-                                    <article class="box horoscope">
-                                        <header class="entry-header">
-                                            <div class="sign leo"></div>
-
-                                            <h3><a href="#">Лев</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>23 июля - 22 августа</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <%= partial( :prognoz, :locals => { znak: "lev"} ) %>
-                                        </div><!-- .entry-content -->
-
-                                        <ul class="horoscope-social">
-                                            <%= erb :social %>
-                                        </ul>
-                                    </article><!-- #post -->
-
-                                    <article class="box horoscope">
-                                        <header class="entry-header">
-                                            <div class="sign virgo"></div>
-
-                                            <h3><a href="#">Дева</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>23 августа - 22 сентября</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <%= partial( :prognoz, :locals => { znak: "deva"} ) %>
-                                        </div><!-- .entry-content -->
-
-                                        <ul class="horoscope-social">
-                                            <%= erb :social %>
-                                        </ul>
-                                    </article><!-- #post -->
-
-                                    <article class="box horoscope">
-                                        <header class="entry-header">
-                                            <div class="sign libra"></div>
-
-                                            <h3><a href="#">Весы</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>23 сентября - 22 октября</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <%= partial( :prognoz, :locals => { znak: "vesi"} ) %>
-                                        </div><!-- .entry-content -->
-
-                                        <ul class="horoscope-social">
-                                            <%= erb :social %>
-                                        </ul>
-                                    </article>
-                                </div>
-
-                                <div class="row">
-                                    <article class="box horoscope">
-                                        <header class="entry-header">
-                                            <div class="sign scorpio"></div>
-
-                                            <h3><a href="#">Скорпион</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>23 октября - 21 ноября</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <%= partial( :prognoz, :locals => { znak: "skorpion"} ) %>
-                                        </div><!-- .entry-content -->
-
-                                        <ul class="horoscope-social">
-                                            <%= erb :social %>
-                                        </ul>
-                                    </article>
-
-                                    <article class="box horoscope">
-                                        <header class="entry-header">
-                                            <div class="sign sagittarius">
-                                            </div>
-
-                                            <h3><a href="#">Стрелец</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>22 ноября - 21 декабря</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <%= partial( :prognoz, :locals => { znak: "strelec"} ) %>
-                                        </div><!-- .entry-content -->
-
-                                        <ul class="horoscope-social">
-                                            <%= erb :social %>
-                                        </ul>
-                                    </article><!-- #post -->
-
-                                    <article class="box horoscope">
-                                        <header class="entry-header">
-                                            <div class="sign capricorn"></div>
-
-                                            <h3><a href="#">Козерог</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>22 декабря - 19 января</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
-
-                                        <div class="entry-content">
-                                            <%= partial(:prognoz, :locals => { znak: "kozerog"} ) %>
-                                        </div><!-- .entry-content -->
-
-                                        <ul class="horoscope-social">
-                                            <%= erb :social %>
-                                        </ul>
-                                    </article><!-- #post -->
-                                </div><!-- .row -->
                             </div><!-- #content -->
                         </div><!-- #primary -->
                     </div>

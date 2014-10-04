@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="http://img.yandex.net/webwidgets/1/WidgetApi.js"></script>
+    <script type="text/javascript">
+      <!--    
+
+        widget.onload = function()
+            {
+                widget.adjustIFrameHeight();
+            }		
+      //-->
+   </script>  
+  </head>
+
+<body onload="widget.adjustIFrameHeight();" style="font-family: Arial, Helvetica, sans-serif; margin: 0; 	padding: 0;    width: 100%;	font-size:13px;	background-color:Transparent; text-align:justify;">
+	<%= partial( :prognoz, :locals => { znak: znak} ) %>
+	
+</body>
+</html>
