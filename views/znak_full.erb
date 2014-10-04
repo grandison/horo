@@ -336,18 +336,12 @@ data-twttr-rendered="true">
                             <div class="site-content">
                                 <div class="row">
                                     <article class="box horoscope" style="width:100%;">
-                                        <header class="entry-header">
-                                            <div class="sign aquarius"></div>
-
-                                            <h3><a href="#">Водолей</a></h3>
-
-                                            <div class="entry-meta">
-                                                <p>20 января - 19 февраля</p>
-                                            </div><!-- .entry-meta -->
-                                        </header><!-- .entry-header -->
+                                        <%= partial( :znak_header, :locals => { znak: znak} ) %>
+                                        
+                                        <!-- .entry-header -->
 
                                         <div class="entry-content">
-                                            <%= partial( :prognoz_full, :locals => { znak: "vodoley"} ) %>
+                                            <%= partial( :prognoz_full, :locals => { znak: znak} ) %>
                                         </div><!-- .entry-content -->
 
                                         <ul class="horoscope-social">
