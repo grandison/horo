@@ -74,6 +74,12 @@ get '/' do
 	erb :index
 end
 
+get "/popup" do
+	@date = Russian::strftime(Time.now, "%d %B")
+	@prognozes = get_prognoz
+	erb :popup
+end
+
 get '/:znak/full' do
 	@date = Russian::strftime(Time.now, "%d %B")
 	@prognozes = get_prognoz

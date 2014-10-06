@@ -10,26 +10,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta charset="UTF-8">
     <meta content="" id="nypviewport" name="viewport">
-    <style type="text/css">
-#horoscope-wrapper .horoscope-module#primary .horoscope h3 {
-    letter-spacing: -1px;
-    }
-    #horoscope-wrapper .horoscope-module#primary .horoscope .entry-content {
-    height: auto !important;
-    }
-    #horoscope-wrapper .horoscope-social .horoscope-vk a {
-        display: inline-block;
-        vertical-align: middle;
-        height: 16px;
-        width: 28px;
-        background-image: url(/vk_icon.png);
-        background-repeat: no-repeat;
-        text-indent: -9999px;
-    }
-    #horoscope-wrapper .horoscope-social {
-        width: 90px !important;
-    }
-    </style>
+    <link href="style.css" rel="stylesheet" type="text/css">
     <link href="fonts.css" rel="stylesheet" type="text/css">
     <meta content="Copyright 2014 NYP Holdings. All rights reserved." name=
     "copyright">
@@ -63,6 +44,9 @@
     <link href=
     "http://s0.wp.com/wp-content/themes/vip/nypost/janrain-capture-screens/stylesheets/styles.css?m=1377912530g"
     rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="http://img.yandex.net/webwidgets/1/WidgetApi.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/jquery.fancybox.pack.js"></script>
 </head>
 
 <body class=
@@ -87,31 +71,7 @@ data-twttr-rendered="true">
     <link href=
     "http://s2.wp.com/_static/??-eJx9j9EKwjAMRX/ImomF7UX8lm7EtpI2pcnw9+2YiKL0KefCPSGBCJk1LpzlDcdF5ACPYlpQzAppNYVWH1vHIxvixWnk/BXMjVysPbXiTOwbemitj9iTCovuq0GCq5v8mv0rM9b9qb/442rAhALBgieeHW2Fa7qc7DCe7TgN0/0JjsFu1Q=="
     id="all-css-4" media="all" rel="stylesheet" type="text/css">
-    <link href="http://thenypost.wordpress.com/xmlrpc.php?rsd" rel="EditURI"
-    title="RSD" type="application/rsd+xml">
-    <meta content="WordPress.com" name="generator">
-    <link href="http://thenypost.wordpress.com/?openidserver=1" rel=
-    "openid.server">
-    <link href="http://thenypost.wordpress.com/" rel="openid.delegate">
-    <link href="http://nypost.com/osd.xml" rel="search" title="New York Post"
-    type="application/opensearchdescription+xml">
-    <link href="http://wordpress.com/opensearch.xml" rel="search" title=
-    "WordPress.com" type="application/opensearchdescription+xml">
-    <meta content="0ChYYJ_QsKnyimSC27PNRqpEJ8sstO08-2yQ81t5yfU" name=
-    "google-site-verification">
-    <meta content="Y35rxQGMDF8RBK0PXe_b3H0oZ6qw1a5l3oI4l_YXIcE" name=
-    "google-site-verification">
-    <meta content="8188997BC82071CE07AB711B5675CE54" name="msvalidate.01">
-    <meta content="New York Post" name="application-name">
-    <meta content="width=device-width;height=device-height" name=
-    "msapplication-window">
-    <meta content=
-    "Your source for breaking news, news about New York, sports, business, entertainment, opinion, real estate, culture, fashion, and more."
-    name="msapplication-tooltip">
-    <meta content=
-    "name=Subscribe;action-uri=http://nypost.com/feed/;icon-uri=http://1.gravatar.com/blavatar/5a214da64b1b66f28cbfcd6b1b352675?s=16"
-    name="msapplication-task"><style id="syntaxhighlighteranchor" type=
-    "text/css">
+    <link href="/jquery.fancybox.css"  rel="stylesheet" type="text/css">
 </style><!--[if lt IE 9]>
           <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js">
   </script>
@@ -595,6 +555,18 @@ data-twttr-rendered="true">
     <!-- START IFRAME : below is Opt In Smart Pixel (Nonsecure) for SailThru -->
     <!-- END IFRAME -->
 
-    <div class="hide"></div><!-- /.hide -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.fancybox.open([
+                {
+                    href : "/popup",
+                },  
+            ], {
+                padding : 0,
+                closeClick: false,
+                type: "iframe"
+            });
+        });
+    </script>
 </body>
 </html>

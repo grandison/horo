@@ -1,0 +1,18 @@
+#horoscope-wrapper .horoscope-module#primary .horoscope h3 {
+    letter-spacing: -1px;
+    }
+    #horoscope-wrapper .horoscope-module#primary .horoscope .entry-content {
+    height: auto !important;
+    }
+    #horoscope-wrapper .horoscope-social .horoscope-vk a {
+        display: inline-block;
+        vertical-align: middle;
+        height: 16px;
+        width: 28px;
+        background-image: url(/vk_icon.png);
+        background-repeat: no-repeat;
+        text-indent: -9999px;
+    }
+    #horoscope-wrapper .horoscope-social {
+        width: 90px !important;
+    }
