@@ -71,19 +71,22 @@ def get_prognoz
 end
 
 get '/' do
-	@date = Russian::strftime(Time.now, "%d %B")
+	Time.zone = "Moscow"
+	@date = Russian::strftime(Time.zone.now, "%d %B")
 	@prognozes = get_prognoz
 	erb :index
 end
 
 get "/popup" do
-	@date = Russian::strftime(Time.now, "%d %B")
+	Time.zone = "Moscow"
+	@date = Russian::strftime(Time.zone.now, "%d %B")
 	@prognozes = get_prognoz
 	erb :popup
 end
 
 get '/:znak/full' do
-	@date = Russian::strftime(Time.now, "%d %B")
+	Time.zone = "Moscow"
+	@date = Russian::strftime(Time.zone.now, "%d %B")
 	@prognozes = get_prognoz
 	partial( :znak_full, :locals => { znak: params[:znak]} )
 end
