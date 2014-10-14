@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/partial'
 require 'typhoeus'
 require 'nokogiri'
+require 'active_support/all'
 require 'russian'
 
 set :protection, :except => :frame_options
@@ -55,7 +56,8 @@ class Cache
 end
 
 def get_prognoz
-	pr = Cache.get(Time.now.strftime("%D")) 
+	Time.zone = "Moscow"
+	pr = Cache.get(Time.zone.now.strftime("%D")) 
 	unless pr
 		pr = {}
 		["vesi", "oven", "strelec", "blizneci", "vodoley", "telec", "deva", "kozerog", "rak", "skorpion", "ribi", "lev"].each do |sign|
@@ -63,7 +65,7 @@ def get_prognoz
 			doc = Nokogiri::HTML(body)
 			pr[sign] = doc.css("#horo-text p").text
 		end
-		Cache.set(Time.now.strftime("%D"),pr)
+		Cache.set(Time.zone.now.strftime("%D"),pr)
 	end
 	pr
 end
