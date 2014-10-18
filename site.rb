@@ -74,6 +74,10 @@ get '/' do
 	Typhoeus.get("http://www.astrostar.ru").body
 end
 
+get '/goroskopy/na-segodnya/vesi' do
+	Typhoeus.get("http://www.astrostar.ru/goroskopy/na-segodnya/vesi").body
+end
+
 get '/*' do
 	path = params[:splat].first
 	redirect("http://www.astrostar.ru/#{path}")
