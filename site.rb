@@ -71,27 +71,36 @@ def get_prognoz
 end
 
 get '/' do
-	Time.zone = "Moscow"
-	@date = Russian::strftime(Time.zone.now, "%d %B")
-	@prognozes = get_prognoz
-	erb :index
+	Typhoeus.get("http://www.astrostar.ru").body
 end
 
-get "/popup" do
-	Time.zone = "Moscow"
-	@date = Russian::strftime(Time.zone.now, "%d %B")
-	@prognozes = get_prognoz
-	erb :popup
+get '/*' do
+	path = params[:splat].first
+	redirect("http://www.astrostar.ru/#{path}")
 end
 
-get '/:znak/full' do
-	Time.zone = "Moscow"
-	@date = Russian::strftime(Time.zone.now, "%d %B")
-	@prognozes = get_prognoz
-	partial( :znak_full, :locals => { znak: params[:znak]} )
-end
+# get '/' do
+# 	Time.zone = "Moscow"
+# 	@date = Russian::strftime(Time.zone.now, "%d %B")
+# 	@prognozes = get_prognoz
+# 	erb :index
+# end
 
-get '/:znak' do
-	@prognozes = get_prognoz
-	partial( :znak, :locals => { znak: params[:znak]} )
-end
+# get "/popup" do
+# 	Time.zone = "Moscow"
+# 	@date = Russian::strftime(Time.zone.now, "%d %B")
+# 	@prognozes = get_prognoz
+# 	erb :popup
+# end
+
+# get '/:znak/full' do
+# 	Time.zone = "Moscow"
+# 	@date = Russian::strftime(Time.zone.now, "%d %B")
+# 	@prognozes = get_prognoz
+# 	partial( :znak_full, :locals => { znak: params[:znak]} )
+# end
+
+# get '/:znak' do
+# 	@prognozes = get_prognoz
+# 	partial( :znak, :locals => { znak: params[:znak]} )
+# end
